@@ -1,5 +1,6 @@
 # euc-kr, utf-8
 import socket
+import time
 
 sock = socket.socket()
 sock.connect(('127.0.0.1', 6030))
@@ -18,5 +19,7 @@ sock.send('리니팍'.encode('utf-8'))  # 상대에게 보낼 데이터를 바�
 
 resp = sock.recv(2)
 print(resp.decode('utf-8'))
+
+time.sleep(1)
 
 sock.close()

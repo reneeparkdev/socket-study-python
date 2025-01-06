@@ -10,12 +10,12 @@ while True:
 
     while True:
         try:
-            data = conn.recv(3)  # 1바이트만 읽겠다
+            data = conn.recv(3)  # 3바이트만 읽겠다
 
             if not data:
                 break
 
-            print(data)
+            # print(data)
             # print(data.decode('euc-kr'))  # 레거시
             decode_data = data.decode('utf-8')
             print(decode_data)
